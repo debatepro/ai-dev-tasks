@@ -46,10 +46,18 @@ The generated task list _must_ follow this structure:
 - [ ] 1.0 Parent Task Title
   - [ ] 1.1 [Sub-task description 1.1]
   - [ ] 1.2 [Sub-task description 1.2]
+    - [ ] 1.2.1 [Sub-task description 1.2.1]
+    - [ ] 1.2.1 [Sub-task description 1.2.2]
 - [ ] 2.0 Parent Task Title
   - [ ] 2.1 [Sub-task description 2.1]
+  - [ ] 2.1 [Sub-task description 2.1]
 - [ ] 3.0 Parent Task Title (may not require sub-tasks if purely structural or configuration)
-```
+
+Rules to follow when building the tasks:
+
+1. Always use #, #.#, #.#.#, etc. naming convention for steps.
+2. Do not create ONE nested sub-task, there must be TWO or more sub-tasks, otherwise create the new task as the level of the previous task.
+3. Do not produce traditional document Bullets, this is MD format for tasks.
 
 ## Interaction Model
 
@@ -58,3 +66,4 @@ The process explicitly requires a pause after generating parent tasks to get use
 ## Target Audience
 
 Assume the primary reader of the task list is a **junior developer** who will implement the feature with awareness of the existing codebase context.
+```
